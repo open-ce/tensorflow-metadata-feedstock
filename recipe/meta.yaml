@@ -33,6 +33,12 @@ requirements:
     - googleapis-common-protos {{ googleapis_common_protos }}
     - protobuf {{ protobuf }}
 
+test:
+  requires:
+    # Use pins to control cos6/cos7 match
+    - libgcc-ng  {{ libgcc }}
+    - libstdcxx-ng  {{ libstdcxx }}
+
 about:
   home: https://github.com/tensorflow/metadata.git
   license: Apache License 2.0
