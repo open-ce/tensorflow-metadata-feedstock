@@ -1,5 +1,5 @@
 {% set name = "tensorflow-metadata" %}
-{% set version = "1.0.0" %}
+{% set version = "1.5.0" %}
 # This is the recipe for tensorflow-metadata
 package:
    name: {{ name }}
@@ -10,7 +10,7 @@ source:
   git_rev: v{{ version }}
   
 build:
-  number: 4
+  number: 1
   string: pyh{{ PKG_HASH }}_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
   noarch: python
 
