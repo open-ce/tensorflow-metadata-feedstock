@@ -1,17 +1,17 @@
-From 6522756e8bf5ded25f99343211a63e3c274a139e Mon Sep 17 00:00:00 2001
+From 341ebb272d634451f204d606490f3839d8d01c79 Mon Sep 17 00:00:00 2001
 From: Nishidha Panpaliya <npanpa23@in.ibm.com>
-Date: Mon, 28 Mar 2022 06:24:18 -0400
+Date: Mon, 28 Mar 2022 07:02:37 -0400
 Subject: [PATCH] Updated protobuf to 3.19.1
 
 ---
- WORKSPACE | 13 ++++---------
- 1 file changed, 4 insertions(+), 9 deletions(-)
+ WORKSPACE | 14 ++++----------
+ 1 file changed, 4 insertions(+), 10 deletions(-)
 
 diff --git a/WORKSPACE b/WORKSPACE
-index 62db091..2f29042 100644
+index 62db091..63dc418 100644
 --- a/WORKSPACE
 +++ b/WORKSPACE
-@@ -2,19 +2,14 @@ workspace(name = "tensorflow_metadata")
+@@ -2,19 +2,13 @@ workspace(name = "tensorflow_metadata")
  
  load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
  
@@ -21,7 +21,7 @@ index 62db091..2f29042 100644
 -    urls = ["https://github.com/bazelbuild/bazel-skylib/releases/download/0.8.0/bazel-skylib.0.8.0.tar.gz"],
 -)
  
- # 310ba5ee72661c081129eb878c1bbcec936b20f0 is based on 3.8.0 with a fix for protobuf.bzl.
+-# 310ba5ee72661c081129eb878c1bbcec936b20f0 is based on 3.8.0 with a fix for protobuf.bzl.
  PROTOBUF_URLS = [
 -    "https://storage.googleapis.com/mirror.tensorflow.org/github.com/protocolbuffers/protobuf/archive/310ba5ee72661c081129eb878c1bbcec936b20f0.tar.gz",
 -    "https://github.com/protocolbuffers/protobuf/archive/310ba5ee72661c081129eb878c1bbcec936b20f0.tar.gz",
