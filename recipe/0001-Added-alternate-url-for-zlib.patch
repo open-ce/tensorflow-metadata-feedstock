@@ -1,0 +1,55 @@
+From 3b3e4089ed4adb5774e51040e80bdefbfa5fc1de Mon Sep 17 00:00:00 2001
+From: Nishidha Panpaliya <npanpa23@in.ibm.com>
+Date: Wed, 30 Mar 2022 02:35:21 -0400
+Subject: [PATCH] Added alternate url for zlib
+
+---
+ WORKSPACE                                     |  1 +
+ .../0001-zlib-URL-updated.patch               | 23 +++++++++++++++++++
+ 2 files changed, 24 insertions(+)
+ create mode 100644 tensorflow_metadata/0001-zlib-URL-updated.patch
+
+diff --git a/WORKSPACE b/WORKSPACE
+index 62db091..68949b4 100644
+--- a/WORKSPACE
++++ b/WORKSPACE
+@@ -21,6 +21,7 @@ http_archive(
+     sha256 = PROTOBUF_SHA256,
+     strip_prefix = PROTOBUF_STRIP_PREFIX,
+     urls = PROTOBUF_URLS,
++    patches = ["//tensorflow_metadata:0001-zlib-URL-updated.patch"],
+ )
+ 
+ # Needed by com_google_protobuf.
+diff --git a/tensorflow_metadata/0001-zlib-URL-updated.patch b/tensorflow_metadata/0001-zlib-URL-updated.patch
+new file mode 100644
+index 0000000..202591e
+--- /dev/null
++++ b/tensorflow_metadata/0001-zlib-URL-updated.patch
+@@ -0,0 +1,23 @@
++From 28b63c67ae1aa67943422e29165341099d8034c0 Mon Sep 17 00:00:00 2001
++From: Nishidha Panpaliya <npanpa23@in.ibm.com>
++Date: Wed, 30 Mar 2022 02:33:09 -0400
++Subject: [PATCH] zlib URL updated
++
++---
++ protobuf_deps.bzl | 2 +-
++ 1 file changed, 1 insertion(+), 1 deletion(-)
++
++diff --git protobuf_deps.bzl protobuf_deps.bzl
++index 25fad7253..7214a063e 100644
++--- protobuf_deps.bzl
+++++ protobuf_deps.bzl
++@@ -11,5 +11,5 @@ def protobuf_deps():
++             build_file = "@com_google_protobuf//:third_party/zlib.BUILD",
++             sha256 = "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
++             strip_prefix = "zlib-1.2.11",
++-            urls = ["https://zlib.net/zlib-1.2.11.tar.gz"],
+++            urls = ["https://zlib.net/zlib-1.2.11.tar.gz", "https://www.zlib.net/fossils/zlib-1.2.11.tar.gz"],
++         )
++-- 
++2.32.0
++
+-- 
+2.32.0
+
