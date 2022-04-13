@@ -1,5 +1,5 @@
 {% set name = "tensorflow-metadata" %}
-{% set version = "1.5.0" %}
+{% set version = "1.7.0" %}
 # This is the recipe for tensorflow-metadata
 package:
    name: {{ name }}
@@ -12,7 +12,7 @@ source:
     - 0001-Updated-protobuf-to-3.19.1.patch     #[protobuf == "3.19.*"]
   
 build:
-  number: 3
+  number: 1
   string: pyh{{ PKG_HASH }}_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
   noarch: python
 
