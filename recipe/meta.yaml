@@ -12,7 +12,7 @@ source:
     - 0001-Updated-protobuf-to-3.19.1.patch     #[protobuf == "3.19.*"]
   
 build:
-  number: 1
+  number: 2
   string: pyh{{ PKG_HASH }}_pb{{ protobuf | replace(".*", "")}}_{{ PKG_BUILDNUM }}
   noarch: python
 
@@ -20,6 +20,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - binutils     #[s390x]
   host:
     - bazel {{ bazel }}
     - python
