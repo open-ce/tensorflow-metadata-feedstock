@@ -10,7 +10,7 @@ source:
   git_rev: v{{ version }}
   patches:
     - 0001-Updated-protobuf-to-3.19.1.patch     #[protobuf == "3.19.*"]
-    - 0002-Updated-zlib-url.patch
+    - 0002-Update-zlib-to-1.2.13.patch 
   
 build:
   number: 1
