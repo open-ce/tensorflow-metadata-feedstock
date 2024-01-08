@@ -9,6 +9,7 @@ source:
   git_url: https://github.com/tensorflow/metadata.git
   git_rev: v{{ version }}
   patches:
+    - 0001-Update-dist-info-for-absl-py-and-protobuf.patch
     - 0002-Update-zlib-to-1.2.13.patch 
   
 build:
