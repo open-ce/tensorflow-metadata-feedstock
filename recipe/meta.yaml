@@ -23,6 +23,7 @@ requirements:
   host:
     - bazel {{ bazel }}
     - python
+    - setuptools {{ setuptools }}
   run:
     - python 
     - absl-py {{ absl_py }}
